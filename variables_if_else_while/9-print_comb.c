@@ -9,9 +9,11 @@
  */
 int main(void)
 {
-char ch = ", ";
+char ch;
+ch = ", ";
 int num;
-char ch1 = "$";
+char ch1;
+ch1 = "$";
 for (num = 0 ; num < 10 ; num++)
 {
 putchar('0' + num);
