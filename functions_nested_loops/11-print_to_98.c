@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+*sign - returns the sign of a number
+*@n: number to be checked
+*Return: -1, 1 or 0
+*/
 void print (long n);
 void print_to_98(int n)
 {
@@ -16,10 +21,9 @@ void print_to_98(int n)
 
 
 	}
-	
 	else if (n > 98)
 	{
-	while (n > 98)
+		while (n > 98)
 		{
 			print (n);
 			_putchar (',');
@@ -40,12 +44,13 @@ void print_to_98(int n)
 
 void print (long n)
 {
-	if (n < 0) {
+	if (n < 0)
+	{
 	_putchar ('-');
 	n = -n;
 		}
 
-	if (n/10)
+	if (n / 10)
 	print (n / 10);
 
 _putchar (n % 10 + '0');
