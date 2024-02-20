@@ -3,14 +3,7 @@
 int print_last_digit(int a)
 {
 	int r;
-       if(a < 0)
-       {	       
- 	r = (-a)%10;
-	_putchar('0' + r);
-       }
-       else
-	r = (a)%10;
-        _putchar('0' + r);
-	
+	r = a < 0 ? (-1*a)%10 : a%10;
+	_putchar (r + '0');
 	return (a%10);
 }
