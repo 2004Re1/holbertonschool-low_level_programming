@@ -1,52 +1,52 @@
 #include "main.h"
-void print(long n);
+void print (long n);
 void print_to_98(int n)
 {
 	if (n < 98)
 	{
-		while (n <98)
+		while (n < 98)
 		{
 			print (n);
 			n++;
-			_putchar(',');
-                        _putchar(' ');
+			_putchar (',');
+			_putchar (' ');
 		}
-		_putchar('9');
-		_putchar('8');
+		_putchar ('9');
+		_putchar ('8');
 
 
 	}
 	
 	else if (n > 98)
-        {
-                while (n >98)
-                {
-                        print (n);
-			_putchar(',');
-			_putchar(' ');
-                        n--;
-                }
-                _putchar('9');
-                _putchar('8');
-        }
-	
+	{
+	while (n > 98)
+		{
+			print (n);
+			_putchar (',');
+			_putchar (' ');
+			n--;
+		}
+		_putchar ('9');
+		_putchar ('8');
+	}
+
 	else if (n == 98)
-       {
-        print(n);
-       }
+	{
+	print (n);
+	}
 
 	_putchar ('\n');
 }
 
-void print(long n)
+void print (long n)
 {
-    if (n < 0) {
-        _putchar('-');
-        n = -n;
-    }
+	if (n < 0) {
+	_putchar ('-');
+	n = -n;
+		}
 
-    if (n/10)
-        print(n/10);
+	if (n/10)
+	print (n / 10);
 
-    _putchar(n%10 + '0');
+_putchar (n % 10 + '0');
 }
