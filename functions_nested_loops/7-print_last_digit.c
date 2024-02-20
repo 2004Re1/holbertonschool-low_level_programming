@@ -2,6 +2,8 @@
 
 int print_last_digit(int a)
 {
-	_putchar('0'+a%10);
+	int r
+	r = a%10;
+	_putchar('0' + r);
 	return (a%10);
 }
