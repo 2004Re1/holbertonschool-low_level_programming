@@ -7,10 +7,10 @@
 int print_sign(int n)
 {
 	if(n > 0)
-		return(_purchar('+'));
+		return(_putchar('+'));
 	if(n < 0)
-		return(_purchar('-'));
+		return(_putchar('-'));
 	if(n == 0)
-		return(_purchar('0'));
+		return(_putchar('0'));
 
 }
