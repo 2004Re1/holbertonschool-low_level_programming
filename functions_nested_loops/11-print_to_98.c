@@ -11,9 +11,9 @@ void print_to_98(int n)
 
 		while (r >= 10)
 		       r = r / 10;
-		_putchar('0' + r)	
+		_putchar('0' + r);
 
-		_putchar('0' + n%10)
+		_putchar('0' + n%10);
 
 		n++;
 		}
@@ -30,9 +30,9 @@ void print_to_98(int n)
 
                 while (r >= 10)
                        r = r / 10;
-                _putchar ('0' + r)
+                _putchar ('0' + r);
 
-                _putchar ('0' + n%10)
+                _putchar ('0' + n%10);
 
                 n--;
                 }
