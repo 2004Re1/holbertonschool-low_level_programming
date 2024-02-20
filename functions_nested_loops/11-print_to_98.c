@@ -33,7 +33,6 @@ void print_to_98(int n)
 	else if (n == 98)
        {
         print(n);
-	_putchar('\n');	
        }
 
 	_putchar ('\n');
