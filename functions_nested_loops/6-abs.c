@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*_abs - returns the sign of a number
+*_abs - returns the absolute value of a number
 *@n: number to be checked
-*Return: -1, 1 or 0
+*Return: the absolute value
 */
 int _abs(int a)
 {
