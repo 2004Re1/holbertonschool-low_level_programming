@@ -1,10 +1,11 @@
 #include "main.h"
+void print (long n);
+
 /**
-*sign - returns the sign of a number
+*print_to_98 - returns the sign of a number
 *@n: number to be checked
 *Return: -1, 1 or 0
 */
-void print (long n);
 void print_to_98(int n)
 {
 	if (n < 98)
@@ -41,7 +42,11 @@ void print_to_98(int n)
 
 	_putchar ('\n');
 }
-
+/**
+*print - returns the sign of a number
+*@n: number to be checked
+*Return: -1, 1 or 0
+*/
 void print (long n)
 {
 	if (n < 0)
