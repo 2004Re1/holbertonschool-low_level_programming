@@ -1,5 +1,5 @@
 #include "main.h"
-
+void print(int n);
 void jack_bauer(void)
 {
 	int n;
