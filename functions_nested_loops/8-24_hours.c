@@ -5,11 +5,6 @@
 */
 void print(int n)
 {
-	if (n < 0)
-	{
-	_putchar('-');
-	n = abs(n);
-	}
 	if (n > 0)
 	print(n / 10);
 	else
