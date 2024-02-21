@@ -3,8 +3,8 @@
 *print - Fsjkoipfhasiofh
 *@n: doinf something
 */
-void print(int n) {
-    
+void print(int n) 
+{   
     if (n < 0) {
         putchar('-');
         n = abs(n);
