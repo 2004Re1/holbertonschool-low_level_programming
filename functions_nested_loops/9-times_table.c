@@ -1,21 +1,21 @@
 #include "main.h"
 
-/*
+/**
  * sign - return
  * @n: something
  * return: -1 1 or 0
- * */
+ */
 int sign(int n)
 {
 	if (n < 0)
-			return (-1);
+		return (-1);
 	else if (n > 0)
-			return (1);
+		return (1);
 	else
-			return (0);
+		return (0);
 }
 
-/*
+/**
  * abs - return
  * @n: something
  * return: -1 1 or 0
@@ -36,7 +36,7 @@ void print_num(int t)
 	int dec;
 
 	if (t < 0)
-			_putchar('-');
+		_putchar('-');
 	t = abs(t);
 
 	num = t;
