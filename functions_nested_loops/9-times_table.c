@@ -3,7 +3,7 @@
  * *sign - returns the sign of a number
  * *@n: number to be checked
  * *Return: -1, 1 or 0
- * */
+ */
 int sign(int n)
 {
 	if (n < 0)
@@ -18,7 +18,7 @@ int sign(int n)
  * *abs - returns the sign of a number
  * *@n: number to be checked
  * *Return: -1, 1 or 0
- * */
+ */
 int abs(int n)
 {
 	return (n < 0 ? n * -1 : n);
@@ -26,7 +26,7 @@ int abs(int n)
 /**
  * *print_num - Fuck Betty
  * *@t: frick betty
- * */
+ */
 void print_num(int t)
 {
 	int num;
@@ -55,7 +55,7 @@ void print_num(int t)
 
 /**
  * *times_table - Fuck Betty
- * */
+ */
 void times_table(void)
 {
 	int i;
