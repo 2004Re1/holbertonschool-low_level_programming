@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *print_diagonal- returns the sign of a number
+ * *print_square- returns the sign of a number
  * *@n: number to be checked
  * *Return: -1, 1 or 0
  */
