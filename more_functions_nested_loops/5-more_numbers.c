@@ -1,7 +1,8 @@
 #include "main.h"
 /**
+ * print - ajdioajf
+ * @n: dioajoaijdf
  * more_numbers - prints the alphabet
- * print - printing
  * Return: Always 0 (Success)
  *
  */
