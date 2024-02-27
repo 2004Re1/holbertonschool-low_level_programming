@@ -1,6 +1,6 @@
 #include "main.h"
 
-int_isupper(int c)
+int int_isupper(int c)
 {
 	if(c == [A-Z])
 		return(1);
