@@ -1,9 +1,9 @@
 #include "main.h"
-/*
- * _isupper - doing somethink 
- * @c just variable
- * return 0 or 1 
- * */
+/**
+*_isupper - returns the absolute value of a number
+*@c: number to be checked
+*Return: the absolute value
+*/
 int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
