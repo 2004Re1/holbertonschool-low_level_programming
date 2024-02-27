@@ -2,7 +2,7 @@
 
 int int_isupper(int c)
 {
-	if(c == "[A-Z]")
+	if(c == "%[A-Z]s")
 		return(1);
 	else
 		return(0);
