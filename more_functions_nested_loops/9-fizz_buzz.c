@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 void print(int n)
 {
 	if (n/10)
