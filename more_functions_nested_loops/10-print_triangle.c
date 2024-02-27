@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * * print_triangle- returns the sign of a number
- * * @size: number to be checked
- * * Return: -1, 1 or 0
- * */
+ *print_triangle- returns the sign of a number
+ *@size: number to be checked
+ *Return: -1, 1 or 0
+ */
 void print_triangle(int size)
 {
 	int i, j, k;
