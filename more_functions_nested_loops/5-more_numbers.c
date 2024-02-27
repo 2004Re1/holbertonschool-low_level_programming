@@ -7,17 +7,17 @@
  */
 void print(int n)
 {
-	if (n/10)
-	print(n/10);
-	_putchar(n%10 + '0');
+	if (n / 10)
+	print(n / 10);
+	_putchar(n % 10 + '0');
 }
 void more_numbers(void)
 {
 	int i;
 	int j;
-for(i = 0 ; i < 10 ; i++)
+for (i = 0 ; i < 10 ; i++)
 {
-for(j = 0 ; j < 15 ; j++)
+for (j = 0 ; j < 15 ; j++)
 {
 print(j);
 }
