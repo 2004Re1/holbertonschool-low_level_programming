@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * print - ajdioajf
- * @n: dioajoaijdf
- * more_numbers - prints the alphabet
+ * print - prints the alphabet
+ * @n: maskdjaf
  * Return: Always 0 (Success)
  *
  */
@@ -12,6 +11,11 @@ void print(int n)
 	print(n / 10);
 	_putchar(n % 10 + '0');
 }
+/**
+  * more_numbers - Print the numbers since 0 up to 9
+  *
+  * Return: The numbers since 0 up to 9
+  */
 void more_numbers(void)
 {
 	int i;
