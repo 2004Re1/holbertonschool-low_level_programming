@@ -13,5 +13,6 @@ for (i = 0 ; i < n ; i++)
 	_putchar(35);
 	_putchar('\n');
 }
+if (n <= 0)
 _putchar('\n');
 }
