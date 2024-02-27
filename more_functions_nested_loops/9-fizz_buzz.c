@@ -43,4 +43,3 @@ print(i);
 putchar(' ');        
 }
 }
-
