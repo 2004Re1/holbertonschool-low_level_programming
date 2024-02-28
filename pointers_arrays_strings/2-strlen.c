@@ -1,11 +1,18 @@
-#include "main.h"
 #include <string.h>
+#include "main.h"
+#include <stdio.h>
+
 /**
- * *_strlen - returns the sign of a number
- * *@s: number to be checked
- * *Return: -1, 1 or 0
+ * _strlen - Entry point
+ *
+ * @s: variable
+ * Return: Always 0.
  */
 int _strlen(char *s)
 {
-	return (strlen((char *)s));
+	char *p = s;
+
+	while (*p != '\0')
+		p++;
+	return (p - s);
 }
