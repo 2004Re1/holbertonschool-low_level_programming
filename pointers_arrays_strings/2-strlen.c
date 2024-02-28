@@ -1,3 +1,9 @@
+#include "main.h"
+/**
+ * *_strlen - returns the sign of a number
+ * *@s: number to be checked
+ * *Return: -1, 1 or 0
+ */
 int _strlen(char *s)
 {
 	return (strlen(*s));
