@@ -10,13 +10,11 @@
  */
 void print_rev(char *s)
 {
-	char *first, *last, *help;
+	char *help;
 	help = s;
 	while(*help != '\0')
 		help++;
 
-	int n;
-	n = help - s;
 
 	while(help > s)
 	{
