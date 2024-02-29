@@ -17,7 +17,7 @@ help = s;
 	help--;
 while (help >= s)
 {
-	       _putchar(*help);
+_putchar(*help);
 		help--;
 }
 	_putchar('\n');
