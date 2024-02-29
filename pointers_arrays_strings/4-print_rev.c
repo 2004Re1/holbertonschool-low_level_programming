@@ -14,7 +14,7 @@ void print_rev(char *s)
 	help = s;
 	while(*help != '\0')
 		help++;
-
+	help--;
 
 	while(help >= s)
 	{
