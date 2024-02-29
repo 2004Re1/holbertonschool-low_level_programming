@@ -15,7 +15,6 @@ help = s;
 	while (*help != '\0')
 		help++;
 	help--;
-
 while (help >= s)
 {
 	       _putchar(*help);
