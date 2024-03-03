@@ -25,4 +25,5 @@ void puts2(char *str)
 	for (i = 0 ; i < n ; i++)
 	if (i % 2 == 0)
 	_putchar(*(str + i));
+	_purchar('\n');
 }
