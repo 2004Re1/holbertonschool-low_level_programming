@@ -1,29 +1,23 @@
-#include <stdio.h>
 #include "main.h"
-/**
- * _strlen - skadjafa
- * @s: akjdpajfa
- * return - nese
- */
-int _strlen(char *s)
-{
-	char *p = s;
 
-	while (*p != '\0')
-		p++;
-	return (p - s);
-}
 /**
- * puts2 - mkaSKDAFD
- * @str: sakdakfal
+ * puts2 - Write a function that prints every other character of a string,
+ *         starting with the first character, followed by a new line.
+ *
+ * @str: This pointer point to a char or string
+ *
+ *
  */
-
 void puts2(char *str)
 {
-	int n = _strlen(str);
-	int i;
-for (i = 0 ; i < n ; i++)
-	if (i % 2 == 0)
-	_putchar(*(str + i));
+	int a;
+
+	for (a = 0; str[a] != '\0'; a++)
+	{
+		if (a % 2 == 0)
+		{
+			_putchar(str[a]);
+		}
+	}
 	_putchar('\n');
 }
