@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod +x -R . 
+git add --all
+git commit -m "new tasl"
+git push -u origin main
