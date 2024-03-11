@@ -1,6 +1,5 @@
-// Online C compiler to run C program online
 #include <stdio.h>
-
+#include "math.h"
 /**
  *_strdup - fills memory
  *@str: size
@@ -23,18 +22,3 @@ char *_strdup(char *str)
 	return (str1);
 }
 
-int main(void)
-{
-	char *s;
-
-	s = _strdup("XKJFVIODSJFOIADHOCA");
-	if (s == NULL)
-	{
-		printf("failed to allocate memory\n");
-		return (1);
-	}
-
-	printf("%s\n", s);
-	free(s);
-	return (0);
-}
