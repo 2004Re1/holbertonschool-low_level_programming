@@ -1,25 +1,31 @@
-#include <stdio.h>
-#include "math.h"
+#include "main.h"
+#include <string.h>
 #include <stdlib.h>
 /**
- *_strdup - fills memory
- *@str: size
- *Return: char
+ * _strdup - fills memory
+ * @str: str
+ *
+ * Return: char
  */
 char *_strdup(char *str)
 {
-        int s = 0;
-        while(str[s] != '\0')
-        {
-                s++;
-        }
+	char *arr;
+	int i, size;
 
-        char *str1;
-
-        str1 = malloc(sizeof(char) *s);
-        for(int i = 0 ; i < s ; i++)
-                str1[i] = str[i];
-
-        return (str1);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	size = strlen(str);
+	arr = (char *)malloc(sizeof(char) * size + 1);
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < size; i++)
+	{
+		arr[i] = str[i];
+	}
+	arr[i] = '\0';
+	return (arr);
 }
-
