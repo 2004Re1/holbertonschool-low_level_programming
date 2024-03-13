@@ -1,11 +1,12 @@
-#include <stdio.h>
+#include "main.h"
+#include <string.h>
 #include <stdlib.h>
 
 /**
- *_strlen - Entry point
+ * _strlen - Entry point
  *
- *@s: variable
- *Return: Always 0.
+ * @s: variable
+ * Return: Always 0.
  */
 int _strlen(char *s)
 {
@@ -17,13 +18,17 @@ int _strlen(char *s)
 }
 
 /**
- *str_concat - concatenates two strings
- *@s1: str
- *@s2: str
- *Return: char
+ * str_concat - concatenates two strings
+ * @s1: str
+ * @s2: str
+ * Return: char
  */
 char *str_concat(char *s1, char *s2)
 {
+	char *arr;
+	int i, size_1, size_2;
+	int size;
+
 	if (s1 == NULL)
 	{
 		size_1 = 0;
@@ -32,7 +37,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		size_1 = _strlen(s1);
 	}
-
 	if (s2 == NULL)
 	{
 		size_2 = 0;
@@ -41,22 +45,21 @@ char *str_concat(char *s1, char *s2)
 	{
 		size_2 = _strlen(s2);
 	}
-
-	int general = s1len + s2len;
-	char *final;
-
-	final = malloc(general* sizeof(char));
-	int i;
-	for (i = 0; i < general; i++)
+	size = size_1 + size_2;
+	arr = malloc(sizeof(char) * (size_1 + size_2) + 1);
+	if (arr == NULL)
 	{
-		if (i < s1len)
-			final[i] = s1[i];
-		else
-			final[i] = s2[i - s1len];
+		return (NULL);
 	}
-
+	for (i = 0; i < size; i++)
+	{
+		if (i < size_1)
+		{
+			arr[i] = s1[i];
+		}
+		else
+			arr[i] = s2[i - size_1];
+	}
 	arr[i] = '\0';
-
-	return (final);
-
+	return (arr);
 }
