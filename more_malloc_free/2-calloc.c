@@ -1,32 +1,28 @@
-nclude "main.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 /**
- *  * _calloc - check the code
- *   *
- *    * @nmemb: var
- *     * @size: var
- *      *
- *       * Return: Always 0.
- *        */
+ *_calloc - check the code
+ *
+ *@nmemb: var
+ *@size: var
+ *
+ *Return: Always 0.
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-		unsigned int i, c;
-			char *arr;
+	if (size == NULL || nmemb == NULL)
+		return (NULL);
 
-				if (nmemb == 0 || size == 0)
-						{
-									return (NULL);
-										}
-					c = nmemb * size;
-						arr = malloc(c);
-							if (arr == NULL)
-									{
-												return (NULL);
-													}
-								for (i = 0; i < c; i++)
-										{
-													arr[i] = 0;
-														}
-									return (arr);
+	char *ptr;
+	ptr = malloc(nmemb *size);
+
+	if (ptr == NULL)
+		return (NULL);
+
+	int i;
+	for (i = 0; i < nmemb * size; i++)
+		ptr[i] = 0;
+
+	return (ptr);
+
+	return ptr;
 }
