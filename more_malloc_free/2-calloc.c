@@ -18,7 +18,6 @@ if (size == 0 || nmemb == 0)
 		return (NULL);
 
 	ptr = malloc(n);
-
 	if (ptr == NULL)
 		return (NULL);
 
