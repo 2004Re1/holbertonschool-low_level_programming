@@ -4,37 +4,63 @@
 #include <stdio.h>
 
 /**
- * createDog - Creates a new dog instance.
- * @name: The name of the dog.
- * @age: The age of the dog.
- * @owner: The owner of the dog.
- * Return: A pointer to the new dog instance.
+ * _strlen - Entry point
+ *
+ * @s: variable
+ * Return: Always 0.
  */
-dog_t *new_dog(char *name, float age, char *owner) {
-    int nameLength = strlen(name);
-    int ownerLength = strlen(owner);
-    dog_t *newDog = malloc(sizeof(dog_t));
+int _strlen(char *s)
+{
+	char *p = s;
 
-    if (newDog == NULL)
-        return NULL;
-
-    newDog->name = malloc(nameLength + 1);
-    if (newDog->name == NULL) {
-        free(newDog);
-        return NULL;
-    }
-    strcpy(newDog->name, name);
-
-    newDog->age = age;
-
-    newDog->owner = malloc(ownerLength + 1);
-    if (newDog->owner == NULL) {
-        free(newDog->name);
-        free(newDog);
-        return NULL;
-    }
-    strcpy(newDog->owner, owner);
-
-    return (newDog);
+	while (*p != '\0')
+		p++;
+	return (p - s);
 }
 
+/**
+  * new_dog- check the code.
+  * @name: name of dog in struct
+  * @age: age of dog in struct
+  * @owner: name of owner of dog in struct
+  * Return: Always 0.
+  */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	int name_l, owner_l, i;
+	dog_t *new_dog1;
+
+	new_dog1 = malloc(sizeof(dog_t));
+	if (new_dog1 == NULL)
+		return (NULL);
+
+	name_l = _strlen(name);
+	owner_l = _strlen(owner);
+
+	new_dog1->name = malloc(name_l + 1);
+	if (new_dog1->name == NULL)
+	{
+		free(new_dog1->name);
+		free(new_dog1);
+		return (NULL);
+	}
+	for (i = 0; i < name_l; i++)
+		new_dog1->name[i] = name[i];
+	new_dog1->name[i] = '\0';
+
+	new_dog1->age = age;
+
+	new_dog1->owner = malloc(owner_l + 1);
+	if (new_dog1->owner == NULL)
+	{
+		free(new_dog1->owner);
+		free(new_dog1->name);
+		free(new_dog1);
+		return (NULL);
+	}
+	for (i = 0; i < owner_l; i++)
+		new_dog1->owner[i] = owner[i];
+	new_dog1->owner[i] = '\0';
+
+	return (new_dog1);
+}
