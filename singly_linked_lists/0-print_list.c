@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void printLinkedlist(struct node *p)
+void printLinkedlist(list_t *p)
 {
 	while (p != NULL)
 	{
