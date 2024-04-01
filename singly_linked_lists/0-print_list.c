@@ -1,17 +1,17 @@
 #include "lists.h"
 
-void printLinkedlist(list_t *p)
+size_t print_list(const list_t *h);
 {
-	while (p != NULL)
+	while (h != NULL)
 	{
-		if (p->str == NULL)
+		if (h->str == NULL)
 		{
 			printf()
 		}
 		else
 		{
 			printf("%d ", p->str);
-			p = p->next;
+			h = h->next;
 		}
 	}
 }
