@@ -4,23 +4,22 @@
 #include "lists.h"
 
 /**
- *free_dlistint - check the code
+ *sum_dlistint - check the code
  *
  *@head: var
  *
  *Return: Always EXIT_SUCCESS.
  */
 
-void free_dlistint(dlistint_t *head)
+int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t * temp;
-
+	int sum;
+	int i;
 	while (head)
 	{
-		temp = head;
+		sum += head->n;
 		head = head->next;
-		free(temp);
 	}
 
-	free(head);
-}
+	return (sum);
+
