@@ -15,15 +15,18 @@
 
 dlistint_t* insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
+	unsigned int i;
+
 	dlistint_t * node1;
 	node1 = malloc(sizeof(dlistint_t));
 	node1->n = n;
 
-	dlistint_t *temp, *temp1;
+	dlistint_t *temp;
+	dlistint_t *temp1;
 	temp = *h;
 	temp1 = (*h)->next;
 	idx--;
-	for (int i = 0; i < idx; i++)
+	for (i = 0; i < idx; i++)
 	{
 		temp = temp->next;
 		temp1 = temp->next;
