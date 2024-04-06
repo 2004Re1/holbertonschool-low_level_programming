@@ -22,7 +22,9 @@ dlistint_t* insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	node1->n = n;
 
 	dlistint_t *temp;
+
 	dlistint_t *temp1;
+
 	temp = *h;
 	temp1 = (*h)->next;
 	idx--;
