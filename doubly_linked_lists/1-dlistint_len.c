@@ -4,13 +4,13 @@
 #include "lists.h"
 
 /**
- * print_dlistint - check the code
+ * print_dlist_len - check the code
  *
  * @h: var
  *
  * Return: Always 0.
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t print_dlist_len(const dlistint_t *h)
 {
         int count = 0;
 
