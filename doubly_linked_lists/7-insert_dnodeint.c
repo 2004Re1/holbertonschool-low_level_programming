@@ -12,33 +12,44 @@
  *
  * Return: Always EXIT_SUCCESS.
  */
-
-dlistint_t* insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
-	dlistint_t *temp;
-	dlistint_t *temp1;
+	dlistint_t *current = *h;
+	dlistint_t *new = malloc(sizeof(dlistint_t));
 
-	dlistint_t * node1;
-	node1 = malloc(sizeof(dlistint_t));
-	node1->n = n;
+	if (new == NULL)
+		return (NULL);
 
+	new->n = n;
+	new->prev = NULL;
+	new->next = NULL;
 
-
-	temp = *h;
-	temp1 = (*h)->next;
-	idx--;
-	for (i = 0; i < idx; i++)
+	if (idx == 0)
 	{
-		temp = temp->next;
-		temp1 = temp->next;
-	}
+		new->next = *h;
+		if (*h != NULL)
+			(*h)->prev = new;
+		*h = new;
+		return (new); }
+	for (i = 0; i < idx - 1; i++)
+	{
+		if (current == NULL)
+		{
+			free(new);
+			return (NULL); }
+		current = current->next; }
+	if (current == NULL)
+	{
+		free(new);
+		return (NULL); }
+	new->next = current->next;
+	new->prev = current;
 
-	temp->next = node1;
-	node1->prev = temp;
-	temp1->prev = node1;
-	node1->next = temp1;
+	if (current->next != NULL)
+		current->next->prev = new;
 
-	return (*h);
+	current->next = new;
 
+	return (new);
 }
