@@ -12,15 +12,16 @@
  *Return: Always EXIT_SUCCESS.
  */
 
-dlistint_t* get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
 
-	dlistint_t * temp;
+	dlistint_t *temp;
 	temp = head;
+
 	for (i = 0; i < index; i++)
 	{
-		if(temp == NULL)
+		if (temp == NULL)
 			return (NULL);
 		temp = temp->next;
 
