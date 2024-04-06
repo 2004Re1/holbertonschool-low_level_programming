@@ -4,22 +4,20 @@
 #include "lists.h"
 
 /**
- *sum_dlistint - check the code
+ * sum_dlistint - check the code
  *
- *@head: var
+ * @head: var
  *
- *Return: Always EXIT_SUCCESS.
+ * Return: Always EXIT_SUCCESS.
  */
-
 int sum_dlistint(dlistint_t *head)
 {
-	int sum;
-	int i;
-	while (head)
+	int sum = 0;
+
+	while (head != NULL)
 	{
 		sum += head->n;
 		head = head->next;
 	}
-
 	return (sum);
-
+}
