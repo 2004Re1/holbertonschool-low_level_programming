@@ -11,14 +11,15 @@
  *
  *Return: Always EXIT_SUCCESS.
  */
+
 dlistint_t* get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-   	unsigned int i;
-    
-	for (i = 0; i < index; i++)
+	dlistint_t * temp;
+	temp = head;
+	for (int i = 0; i < index; i++)
 	{
-		head = head->next;
+		temp = temp->next;
 	}
 
-	return (head);
+	return (temp);
 }
