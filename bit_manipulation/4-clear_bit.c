@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * flip_bits - gets the number of bits flipped form n to m
- * @n: initial lu int
- * @m: secondary lu int
+ * clear_bit - sets a bit to 0 at a given index
+ * @n: pointer to integer
+ * @index: index to set to 0
  *
- * Return: number of bits need to flip to get from `n to `m`
+ * Return: 1 if succeeded of -1 if failed
  */
-
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int count = 0, res = n ^ m;
+	unsigned long int size, mask;
 
-	while (res != 0)
-	{
-		count += res & 1;
-		res >>= 1;
-	}
-	return (count);
+	size = sizeof(*n) * 8 - 1;
+	if (index > size)
+		return (-1);
+	mask = 1 << index;
+	*n = *n & ~mask;
+	return (1);
 }
